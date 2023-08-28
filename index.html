@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rule of Three</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <br><br><br>
+    <h1>Simple Rule of Three</h1>
+    <form>
+        <label for="value1"> First Value: </label>
+        <input type="number" id="value1" name="value1" required><br><br>
+        
+        <label for="value2"> Second Value: </label>
+        <input type="number" id="value2" name="value2" required><br><br>
+
+        <label for="value3"> Third Value: </label>
+        <input type="number" id="value3" name="value3" required><br><br>
+
+        <input type="button" value="Calculate" onclick="simpleThreeRule()">
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+        function simpleThreeRule() {
+            var value1 = parseFloat(document.getElementById('value1').value)
+            var value2 = parseFloat(document.getElementById('value2').value)
+            var value3 = parseFloat(document.getElementById('value3').value)
+
+            var result = (value1 * value2) / value3
+            document.getElementById('result').textContent = "Result: " + result
+        }
+    </script>
+</body>
+</html>
